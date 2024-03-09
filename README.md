@@ -33,8 +33,8 @@ git clone https://github.com/yourusername/car-parking-system.git
 ```
 
 ## Dependencies
-Maven
-Lombok
+- Maven
+- Lombok
 
 ## Contributing
 Contributions are welcome! Feel free to open an issue or submit a pull request for any improvements or additional features.
