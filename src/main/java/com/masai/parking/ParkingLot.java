@@ -1,6 +1,7 @@
 package com.masai.parking;
 
 
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -164,5 +165,18 @@ public class ParkingLot {
     }
 
 
+    public boolean verifyTokenAndTimestamp(String tokenId, LocalDateTime exitTimestamp) {
+
+        Vehicle vehicle = tokenVehicleMap.get(tokenId);
+        if (vehicle != null) {
+            // Get the entry timestamp of the vehicle
+            LocalDateTime entryTimestamp = vehicle.getTimestamp();
+            // Check if the exit timestamp is after the entry timestamp
+            if (exitTimestamp.isAfter(entryTimestamp)) {
+                return true; // Token and timestamp are valid
+            }
+        }
+        return false; // Token or timestamp is invalid
+    }
 
 }

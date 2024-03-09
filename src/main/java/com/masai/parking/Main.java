@@ -1,96 +1,57 @@
 package com.masai.parking;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        // Create a parking lot with 3 floors and 5 spaces per floor
+
+        // Initialize the parking lot for 2 cars
+        ParkingLot parkingLot = ParkingLot.getInstance();
         List<Floor> floors = new ArrayList<>();
 
-        List<VehicleSpace> vehicleSpacesForCar = new ArrayList<>();
-        vehicleSpacesForCar.add(new VehicleSpace(1,true,VehicleType.CAR,1));
-        vehicleSpacesForCar.add(new VehicleSpace(2,true,VehicleType.CAR,1));
-        vehicleSpacesForCar.add(new VehicleSpace(3,true,VehicleType.CAR,1));
-        vehicleSpacesForCar.add(new VehicleSpace(4,true,VehicleType.CAR,1));
-        vehicleSpacesForCar.add(new VehicleSpace(5,true,VehicleType.CAR,1));
+        Floor floor1 = new Floor(1,1);
+        floor1.getVehicleSpaces().add(new VehicleSpace(1,true,VehicleType.CAR,1));
 
+        Floor floor2 = new Floor(2,1);
+        floor2.getVehicleSpaces().add(new VehicleSpace(1,true,VehicleType.CAR,2));
 
-        List<VehicleSpace> vehicleSpacesForBike = new ArrayList<>();
-        vehicleSpacesForBike.add(new VehicleSpace(6,true,VehicleType.BIKE,1));
-        vehicleSpacesForBike.add(new VehicleSpace(7,true,VehicleType.BIKE,1));
-        vehicleSpacesForBike.add(new VehicleSpace(8,true,VehicleType.BIKE,1));
-        vehicleSpacesForBike.add(new VehicleSpace(9,true,VehicleType.BIKE,1));
-        vehicleSpacesForBike.add(new VehicleSpace(10,true,VehicleType.BIKE,1));
-
-
-        List<VehicleSpace> vehicleSpacesForBus = new ArrayList<>();
-        vehicleSpacesForBus.add(new VehicleSpace(11,true,VehicleType.BUS,1));
-        vehicleSpacesForBus.add(new VehicleSpace(12,true,VehicleType.BUS,1));
-        vehicleSpacesForBus.add(new VehicleSpace(13,true,VehicleType.BUS,1));
-        vehicleSpacesForBus.add(new VehicleSpace(14,true,VehicleType.BUS,1));
-        vehicleSpacesForBus.add(new VehicleSpace(15,true,VehicleType.BUS,1));
-
-
-        Floor floor1 = new Floor(1,5);
-        floor1.getVehicleSpaces().addAll(vehicleSpacesForBus);
-        floor1.getVehicleSpaces().addAll(vehicleSpacesForBike);
-        floor1.getVehicleSpaces().addAll(vehicleSpacesForCar);
-
-
-        List<VehicleSpace> vehicleSpacesForCar2 = new ArrayList<>();
-        vehicleSpacesForCar2.add(new VehicleSpace(1,true,VehicleType.CAR,2));
-        vehicleSpacesForCar2.add(new VehicleSpace(2,true,VehicleType.CAR,2));
-        vehicleSpacesForCar2.add(new VehicleSpace(3,true,VehicleType.CAR,2));
-        vehicleSpacesForCar2.add(new VehicleSpace(4,true,VehicleType.CAR,2));
-        vehicleSpacesForCar2.add(new VehicleSpace(5,true,VehicleType.CAR,2));
-
-
-        List<VehicleSpace> vehicleSpacesForBike2 = new ArrayList<>();
-        vehicleSpacesForBike2.add(new VehicleSpace(6,true,VehicleType.BIKE,2));
-        vehicleSpacesForBike2.add(new VehicleSpace(7,true,VehicleType.BIKE,2));
-        vehicleSpacesForBike2.add(new VehicleSpace(8,true,VehicleType.BIKE,2));
-        vehicleSpacesForBike2.add(new VehicleSpace(9,true,VehicleType.BIKE,2));
-        vehicleSpacesForBike2.add(new VehicleSpace(10,true,VehicleType.BIKE,2));
-
-
-        List<VehicleSpace> vehicleSpacesForBus2 = new ArrayList<>();
-        vehicleSpacesForBus2.add(new VehicleSpace(11,true,VehicleType.BUS,2));
-        vehicleSpacesForBus2.add(new VehicleSpace(12,true,VehicleType.BUS,2));
-        vehicleSpacesForBus2.add(new VehicleSpace(13,true,VehicleType.BUS,2));
-        vehicleSpacesForBus2.add(new VehicleSpace(14,true,VehicleType.BUS,2));
-        vehicleSpacesForBus2.add(new VehicleSpace(15,true,VehicleType.BUS,2));
-
-        Floor floor2 = new Floor(2,5);
-        floor2.getVehicleSpaces().addAll(vehicleSpacesForBus2);
-        floor2.getVehicleSpaces().addAll(vehicleSpacesForBike2);
-        floor2.getVehicleSpaces().addAll(vehicleSpacesForCar2);
-
-
-
-        floors.add(floor1);
-        floors.add(floor2);
-
-        ParkingLot parkingLot = ParkingLot.getInstance();
-        parkingLot.initialize(floors);
+       floors.add(floor1);
+       floors.add(floor2);
+       parkingLot.initialize(floors);
 
         // Display parking lot status
         parkingLot.displayParkingLotStatus();
+        // Enter car details with timestamp values
+        LocalDateTime timestamp1 = LocalDateTime.now().minusHours(2); // Example timestamp for car 1
+        LocalDateTime timestamp2 = LocalDateTime.now().minusHours(1); // Example timestamp for car 2
 
-        // Add vehicles to the parking lot
-        Vehicle vehicle1 = new Vehicle(VehicleType.CAR, "ABC123", "Red");
-        parkingLot.addVehicle(vehicle1);
-        Vehicle vehicle2 = new Vehicle(VehicleType.BIKE, "XYZ456", "Blue");
-        parkingLot.addVehicle(vehicle2);
+        Vehicle car1 = new Vehicle(VehicleType.CAR, "ABC123", "Red");
+        car1.setTimestamp(timestamp1);
+        parkingLot.addVehicle(car1);
 
+        Vehicle car2 = new Vehicle(VehicleType.CAR, "XYZ456", "Blue");
+        car2.setTimestamp(timestamp2);
+        parkingLot.addVehicle(car2);
 
+        // Verify token ID and timestamp for car 1
+        String tokenId1 = car1.getTokenId();
+        LocalDateTime exitTimestamp1 = LocalDateTime.now(); // Example exit timestamp for car 1
+        int durationInHours1 = (int) Duration.between(car1.getTimestamp(), exitTimestamp1).toHours();
+        boolean isTokenValid1 = parkingLot.verifyTokenAndTimestamp(tokenId1, exitTimestamp1);
 
-        String token = parkingLot.getTokenIdForVehicle("ABC123");
-        int cost = parkingLot.calculateParkingFee(token,10);
-        System.out.println("Parking fee for car for 3 hours: ₹" + cost);
+        if (isTokenValid1) {
+            System.out.println("Car 1 details: Registration number: " + car1.getRegistrationNumber() + ", Color: " + car1.getColor());
+            int parkingFee1 = parkingLot.calculateParkingFee(tokenId1, durationInHours1);
+            System.out.println("Parking fee for Car 1: ₹" + parkingFee1);
+        } else {
+            System.out.println("Invalid token ID or timestamp for Car 1.");
+        }
+
+        // Display parking lot status
+        parkingLot.displayParkingLotStatus();
     }
 
 }
