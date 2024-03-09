@@ -14,19 +14,23 @@ The Car Parking System is a Java application designed to manage a parking lot wi
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/yourusername/car-parking-system.git
+```bash
+git clone https://github.com/yourusername/car-parking-system.git
+```
 
 2.Navigate to the project directory:
 ```bash
    cd car-parking-system
+```
 
 3. Build the project using Maven:
 ```bash
    mvn clean install
+```
 4. Run the Application
 ```bash
    java -jar target/car-parking-system.jar
+```
 
 ## Dependencies
 Maven
