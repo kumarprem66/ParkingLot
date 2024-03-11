@@ -48,10 +48,17 @@ git clone https://github.com/kumarprem66/ParkingLot.git
 ```bash
    mvn clean install
 ```
-4. Run the Application
-```bash
-   java -jar target/car-parking-system.jar
-```
+## Building and Running the Project
+
+To build the project from the JAR file, follow these steps:
+
+1. Download the latest release JAR file from the [Releases](https://github.com/kumarprem66/ParkingLot/releases/tag/v1.0.0) page.
+2. Open a terminal or command prompt and navigate to the directory containing the JAR file.
+3. Run the following command to execute the JAR file:
+
+   ```sh
+   java -jar Parking-1.0-SNAPSHOT.jar
+
 
 ## Dependencies
 - Maven
