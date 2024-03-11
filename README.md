@@ -15,7 +15,7 @@ The Car Parking System is a Java application designed to manage a parking lot wi
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/car-parking-system.git
+git clone https://github.com/kumarprem66/ParkingLot.git
 ```
 
 2.Navigate to the project directory:
