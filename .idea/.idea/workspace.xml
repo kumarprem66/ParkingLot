@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1da5e2d-dfa0-49af-b55d-4d97d0c0dc61" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/Testing.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/costing/DailyCostStrategy.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/costing/HourlyCostStrategy.java" afterDir="false" />
@@ -12,19 +13,17 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/entity/Floor.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/entity/FloorConfiguration.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/entity/FloorManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/entity/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/entity/ParkingLot.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/entity/TokenManager.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/entity/Vehicle.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/entity/VehicleSpace.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/problem-statement.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masai/parking/CostStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/CostStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masai/parking/Floor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/Floor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masai/parking/CostStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masai/parking/Floor.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masai/parking/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masai/parking/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masai/parking/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/masai/parking/VehicleSpace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/VehicleSpace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masai/parking/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/masai/parking/VehicleSpace.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/masai/parking/VehicleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/masai/parking/enu/VehicleType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,12 +72,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.masai.parking.entity.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.masai.parking.entity.Main" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.masai.parking.Main" />
       <module name="Parking" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.masai.parking.entity.*" />
+          <option name="PATTERN" value="com.masai.parking.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
